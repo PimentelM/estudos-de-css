@@ -1,0 +1,341 @@
+<html>
+<head>
+    <title>
+        Flexbox example
+    </title>
+</head>
+
+<body>
+
+<div class="sectionTitle">
+    Flexbox features
+</div>
+
+<div class="caption">Here we will explore some possibilities of flexbox</div>
+
+<!--Base-->
+<details class="section">
+    <summary class="sectionTitle">Base</summary>
+    <div class="description">
+        flex with default properties
+    </div>
+
+    <div class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred;">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption"> </div>
+</details>
+
+<!--Justify-->
+<details class="section">
+
+
+    <summary class="sectionTitle">
+        Justify
+    </summary>
+
+
+    <div class="description">
+        flex-start
+    </div>
+
+    <div style="justify-content: flex-start" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="description">
+        space-around
+    </div>
+    <div style="justify-content:space-around" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="description">
+        space-between
+    </div>
+
+    <div style="justify-content:space-between" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="description">
+        center
+    </div>
+
+    <div style="justify-content:center" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="description">
+        flex-end
+    </div>
+
+    <div style="justify-content: flex-end" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+</details>
+
+<!--Nested Flexboxes-->
+<details class="section">
+
+    <summary class="sectionTitle">
+        Nested flexboxes
+    </summary>
+
+    <div style="justify-content: space-between" class="container nestedFlex">
+        <div style="display: flex">
+            <div style="background-color: cadetblue">Home</div>
+        </div>
+
+        <div style="display: flex">
+            <div style="background-color: indianred">Search</div>
+            <div style="background-color: lightseagreen">Logout</div>
+        </div>
+    </div>
+    <div class="caption">
+        Here we use two flexboxes inside a main flexbox, the main one is used to create spacing.
+    </div>
+
+
+</details>
+
+<!--Margin Auto-->
+<details class="section">
+    <summary class="sectionTitle">Margin Auto</summary>
+    <div class="description">
+        margin-left: auto;
+    </div>
+
+    <div style="justify-content: flex-start" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred; margin-left: auto">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">Here we achieve the exact same result as before but using a margin-left: auto in the search button.</div>
+</details>
+
+<!--Flex-->
+<details class="section">
+    <summary class="sectionTitle">Flex property</summary>
+
+    <div class="description">
+        flex: 1 @ search
+    </div>
+
+    <div style="justify-content: flex-start" class="container">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred; flex: 1">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">We use flex only on the search button, so the others stay static while search is dynamic</div>
+
+    <div class="description">
+        flex: 1 @ all
+    </div>
+
+    <div style="justify-content: flex-start" class="container flexProperty">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">Here we use flex property to make our flex items to fill the whole space</div>
+
+    <div class="description">
+        flex 1 @ all & flex: 2 @ search
+    </div>
+
+    <div style="justify-content: flex-start" class="container flexProperty">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred; flex: 2">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption"> Now we make search box to have double the flex</div>
+
+
+</details>
+
+
+<!--Align-->
+<details class="section">
+    <summary class="sectionTitle">Align</summary>
+
+    <div class="description">
+        Baseline of what happens when a container has great height without align specified.
+    </div>
+
+    <div class="container height300px">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">The elements all stretch</div>
+
+
+    <div class="description">
+        Centering items inside a container using align and justify
+    </div>
+
+    <div style="align-items: center; justify-content: center;" class="container height300px">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">align-items: center; justify-content: center;</div>
+
+
+    <div class="description">
+        Aligning a single element inside the container
+    </div>
+
+    <div style="align-items: center; justify-content: center;" class="container height300px">
+        <div style="background-color: cadetblue">Home</div>
+        <div style="align-self: flex-start; background-color: indianred">Search</div>
+        <div style="background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">Here we use the align-self css property to change the align of search button </div>
+
+</details>
+
+<!--Wrap-->
+<details class="section">
+    <summary class="sectionTitle">Wrap</summary>
+    <div class="description">
+        Wrap contents that overflow in size
+    </div>
+
+    <div class="container" style="flex-wrap: wrap">
+        <div style="width: 400px; background-color: cadetblue">Home</div>
+        <div style="width: 400px; background-color: indianred;">Search</div>
+        <div style="width: 80%; background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">flex-wrap: wrap</div>
+</details>
+
+<!--Flex Grow/Shrink/Basis-->
+<details class="section">
+    <summary class="sectionTitle">Flex Grow/Shrink/Basis</summary>
+
+    <div class="caption">Here we use the extra properties of flexbox through the flex syntax of: flex {grow} {shrink} {basis}</div>
+    <br>
+    <div class="description">
+        Shrink componentes at different rates
+    </div>
+
+    <div class="container">
+        <div style="flex: 0 5 300px; background-color: cadetblue">Home</div>
+        <div style="flex: 0 3 300px; background-color: indianred;">Search</div>
+        <div style="flex: 0 1 300px; background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption">flex: 0 5 300px / flex: 0 3 300px / flex: 0 1 300px</div>
+</details>
+
+
+<!--Order-->
+<details class="section">
+    <summary class="sectionTitle">Order</summary>
+    <div class="description">
+        Change the order of elements through css, despite the template order
+    </div>
+
+    <div class="container">
+        <div style="order: 1;background-color: cadetblue">Home</div>
+        <div style="order: 50;background-color: indianred;">Search</div>
+        <div style="order: -1;background-color: lightseagreen">Logout</div>
+    </div>
+
+    <div class="caption"><strong>Home:</strong> order: 1; <strong>Search:</strong> order: 50; <strong>Logout:</strong> order: -1;</div>
+</details>
+
+
+
+</body>
+
+<style>
+
+
+    .height300px {
+        height: 300px
+    }
+
+
+    .container.nestedFlex > div {
+        padding: 0;
+    }
+
+    .container.nestedFlex > div > div{
+        padding: 8px 12px;
+    }
+
+    .flexProperty > div {
+        flex: 1;
+    }
+
+    .doubleFlex {
+        flex: 2;
+    }
+
+    .section {
+        margin-top: 12px;
+    }
+
+    .sectionTitle {
+        color: #681aff;
+        font-size: 24px;
+        margin: 12px;
+        margin-left: 24px;
+    }
+
+    .description {
+        color: #681aff;
+        margin-left: 24px;
+        font-size: 24px;
+    }
+
+    .caption {
+        color: #681aff;
+        margin-left: 24px;
+        font-size: 16px;
+    }
+
+    html {
+        background-color: khaki;
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+        border: 5px solid #fdb86b;
+        display: flex;
+        margin: 5px 24px;
+    }
+
+    .container > div {
+        color: khaki;
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+</style>
+</html>
